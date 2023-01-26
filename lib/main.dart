@@ -20,10 +20,10 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(debugShowCheckedModeBanner: false,
       home: Scaffold(
         body:Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
           Padding(
-              padding:  EdgeInsets.only(top: 100,left: 40,right: 40,bottom: 60),
+              padding:  EdgeInsets.only(top: 260,left: 40,right: 40,bottom: 60),
               child: TextField(
                 controller: controller,
                 readOnly: true,
@@ -47,11 +47,22 @@ class _MyAppState extends State<MyApp> {
                   controller.text = controller.text.substring(0, controller.text.length -1);
 
                 }, child:const Text('C')),
-                ElevatedButton(
-                onPressed: (){
-                  //  controller.text+= '/';
-                  controller.text = controller.text.substring(0, controller.text.length-controller.text.length);
-                }, child: const Text('clear')),
+                SizedBox(
+                  height: 50,
+                  child: ElevatedButton(
+                     style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(100)
+                          )
+                        )
+                        ),
+                  onPressed: (){
+                    //  controller.text+= '/';
+                    controller.text = controller.text.substring(0, controller.text.length-controller.text.length);
+                  }, child: const Text('clear')),
+                ),
              
                
             ],),Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -68,10 +79,21 @@ class _MyAppState extends State<MyApp> {
                 onPressed: (){
                   controller.text+= '3';
                 }, child:const Text('3')),
-                  ElevatedButton(
+                  SizedBox(
+                    height: 50,
+                    child: ElevatedButton(
+                       style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(100)
+                          )
+                        )
+                        ),
                 onPressed: (){ 
                  controller.text += '+';
-                  }, child:const Text('+'))
+                    }, child:const Text('+')),
+                  )
             ],),
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -87,10 +109,21 @@ class _MyAppState extends State<MyApp> {
                 onPressed: (){
                   controller.text+= '6';
                 }, child:const Text('6')),
-                  ElevatedButton(
+                  SizedBox(
+                    height: 50,
+                    child: ElevatedButton(
+                       style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(100)
+                          )
+                        )
+                        ),
                 onPressed: (){ 
                  controller.text += '-';
-                  }, child:const Text('-'))
+                    }, child:const Text('-')),
+                  )
             ],),
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -106,72 +139,127 @@ class _MyAppState extends State<MyApp> {
                 onPressed: (){
                   controller.text+= '9';
                 }, child:const Text('9')),
-                  ElevatedButton(
+                  SizedBox(height: 50,
+                    child: ElevatedButton(
+                       style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(100)
+                          )
+                        )
+                        ),
                 onPressed: (){ 
                  controller.text += '*';
-                  }, child:const Text('*'),
-                  
+                    }, child:const Text('*'),
+                    
+                    ),
                   ),
             ],),
                  Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                  ElevatedButton(
+                  SizedBox(
+                    height: 50,
+                    child: ElevatedButton(
+                       style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(100)
+                          )
+                        )
+                        ),
                 onPressed: (){
-                  controller.text+= ',';
+                    controller.text+= ',';
                 }, child:const Text(',')),
-                 ElevatedButton(
+                  ),
+                 SizedBox(
+                  height: 50,
+                   child: ElevatedButton(
+                     style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(100)
+                          )
+                        )
+                        ),
                 onPressed: (){
-                  controller.text+= '0';
+                    controller.text+= '0';
                 }, child:const Text('0')),
-                 ElevatedButton(
+                 ),
+                 SizedBox(
+                  height: 50,
+                   child: ElevatedButton(
+                     style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(100)
+                          )
+                        )
+                        ),
                 onPressed: (){
-                     String s = controller.text;
-                  int ind  = s.indexOf('+');
-                  if(ind != -1){
-                    String a = s.substring(0,ind);
-                    String b = s.substring(ind+1);
-                    int ans = int.parse(a)+int.parse(b);
-                    controller.text = ans.toString();
-                  }
-                  setState(() {
                        String s = controller.text;
-                  int ind  = s.indexOf('-');
-                  if(ind != -1){
-                    String a = s.substring(0,ind);
-                    String b = s.substring(ind+1);
-                    int ans = int.parse(a)-int.parse(b);
-                    controller.text = ans.toString();
-                  }
-                  },
-                  ); setState(() {
-                       String s = controller.text;
-                  int ind  = s.indexOf('*');
-                  if(ind != -1){
-                    String a = s.substring(0,ind);
-                    String b = s.substring(ind+1);
-                    int ans = int.parse(a)*int.parse(b);
-                    controller.text = ans.toString();
-                  }
-                  },
-                  ); setState(() {
-                       String s = controller.text;
-                  int ind  = s.indexOf('/');
-                  if(ind != -1){
-                    String a = s.substring(0,ind);
-                    String b = s.substring(ind+1);
-                    int ans = int.parse(a)~/int.parse(b);
-                    controller.text = ans.toString();
-                  }
-                  },
-                  );
+                    int ind  = s.indexOf('+');
+                    if(ind != -1){
+                      String a = s.substring(0,ind);
+                      String b = s.substring(ind+1);
+                      int ans = int.parse(a)+int.parse(b);
+                      controller.text = ans.toString();
+                    }
+                    setState(() {
+                         String s = controller.text;
+                    int ind  = s.indexOf('-');
+                    if(ind != -1){
+                      String a = s.substring(0,ind);
+                      String b = s.substring(ind+1);
+                      int ans = int.parse(a)-int.parse(b);
+                      controller.text = ans.toString();
+                    }
+                    },
+                    ); setState(() {
+                         String s = controller.text;
+                    int ind  = s.indexOf('*');
+                    if(ind != -1){
+                      String a = s.substring(0,ind);
+                      String b = s.substring(ind+1);
+                      int ans = int.parse(a)*int.parse(b);
+                      controller.text = ans.toString();
+                    }
+                    },
+                    ); setState(() {
+                        
+                         String s = controller.text;
+                    int ind  = s.indexOf('/');
+                    if(ind != -1){
+                      String a = s.substring(0,ind);
+                      String b = s.substring(ind+1);
+                      int ans = int.parse(a)~/int.parse(b);
+                      controller.text = ans.toString();
+                    }
+                    },
+                    );
                 }, 
                 
                 child:const Text('=')),
-                  ElevatedButton(
+                 ),
+                  SizedBox(
+                    height: 50,
+                    child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(100)
+                        )
+                      )
+                      ),
+                    
                 onPressed: (){ 
                  controller.text += '/';
-                  }, child:const Text('/'),
-                  
+                    }, child:const Text('/'),
+                    ),
                   ),
             ],)
            
@@ -180,14 +268,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-//  ElevatedButton(
-//                 onPressed: (){ 
-//                   String s = controller.text;
-//                   int ind  = s.indexOf('+');
-//                   if(ind != -1){
-//                     String a = s.substring(0,ind);
-//                     String b = s.substring(ind+1);
-//                     int ans = int.parse(a)+int.parse(b);
-//                     controller.text = ans.toString();
-//                   }
-//                   }, child:const Text('='))
