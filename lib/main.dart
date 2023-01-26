@@ -34,19 +34,51 @@ class _MyAppState extends State<MyApp> {
               
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-              ElevatedButton(
-                onPressed: (){
-                  controller.text+= 'x2';
-                }, child:const Text('x2')),
-                ElevatedButton(
-                onPressed: (){
-                  controller.text+= '%';
-                }, child:const Text('%')),
-                ElevatedButton(
-                onPressed: (){
-                  controller.text = controller.text.substring(0, controller.text.length -1);
+              SizedBox(height: 50,
+                child: ElevatedButton(
+                   style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(100)
+                            )
+                          )
+                          ),
+                  onPressed: (){
+                    controller.text+= 'x2';
+                  }, child:const Text('x2')),
+              ),
+                SizedBox(
+                  height: 50,
+                  child: ElevatedButton(
+                     style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(100)
+                            )
+                          )
+                          ),
+                  onPressed: (){
+                    controller.text+= '%';
+                  }, child:const Text('%')),
+                ),
+                SizedBox(
+                  height: 50,
+                  child: ElevatedButton(
+                     style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(100)
+                            )
+                          )
+                          ),
+                  onPressed: (){
+                    controller.text = controller.text.substring(0, controller.text.length -1);
 
-                }, child:const Text('C')),
+                  }, child:const Text('C')),
+                ),
                 SizedBox(
                   height: 50,
                   child: ElevatedButton(
@@ -67,18 +99,51 @@ class _MyAppState extends State<MyApp> {
                
             ],),Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                  ElevatedButton(
+                  SizedBox(
+                    height: 50,
+                    child: ElevatedButton(
+                       style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(100)
+                              )
+                            )
+                            ),
                 onPressed: (){
-                  controller.text+= '1';
+                    controller.text+= '1';
                 }, child:const Text('1')),
-                 ElevatedButton(
+                  ),
+                 SizedBox(
+                  height: 50,
+                   child: ElevatedButton(
+                     style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(100)
+                              )
+                            )
+                            ),
                 onPressed: (){
-                  controller.text+= '2';
+                    controller.text+= '2';
                 }, child:const Text('2')),
-                 ElevatedButton(
+                 ),
+                 SizedBox(
+                  height: 50,
+                   child: ElevatedButton(
+                     style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(100)
+                              )
+                            )
+                            ),
                 onPressed: (){
-                  controller.text+= '3';
+                    controller.text+= '3';
                 }, child:const Text('3')),
+                 ),
                   SizedBox(
                     height: 50,
                     child: ElevatedButton(
@@ -97,18 +162,51 @@ class _MyAppState extends State<MyApp> {
             ],),
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                  ElevatedButton(
+                  SizedBox(
+                    height: 50,
+                    child: ElevatedButton(
+                       style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(100)
+                              )
+                            )
+                            ),
                 onPressed: (){
-                  controller.text+= '4';
+                    controller.text+= '4';
                 }, child:const Text('4')),
-                 ElevatedButton(
+                  ),
+                 SizedBox(
+                  height: 50,
+                   child: ElevatedButton(
+                     style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(100)
+                              )
+                            )
+                            ),
                 onPressed: (){
-                  controller.text+= '5';
+                    controller.text+= '5';
                 }, child:const Text('5')),
-                 ElevatedButton(
+                 ),
+                 SizedBox(
+                  height: 50,
+                   child: ElevatedButton(
+                     style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(100)
+                              )
+                            )
+                            ),
                 onPressed: (){
-                  controller.text+= '6';
+                    controller.text+= '6';
                 }, child:const Text('6')),
+                 ),
                   SizedBox(
                     height: 50,
                     child: ElevatedButton(
@@ -127,18 +225,51 @@ class _MyAppState extends State<MyApp> {
             ],),
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                  ElevatedButton(
+                  SizedBox(
+                    height: 50,
+                    child: ElevatedButton(
+                       style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(100)
+                              )
+                            )
+                            ),
                 onPressed: (){
-                  controller.text+= '7';
+                    controller.text+= '7';
                 }, child:const Text('7')),
-                 ElevatedButton(
+                  ),
+                 SizedBox(
+                  height: 50,
+                   child: ElevatedButton(
+                     style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(100)
+                              )
+                            )
+                            ),
                 onPressed: (){
-                  controller.text+= '8';
+                    controller.text+= '8';
                 }, child:const Text('8')),
-                 ElevatedButton(
+                 ),
+                 SizedBox(
+                  height: 50,
+                   child: ElevatedButton(
+                     style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(100)
+                              )
+                            )
+                            ),
                 onPressed: (){
-                  controller.text+= '9';
+                    controller.text+= '9';
                 }, child:const Text('9')),
+                 ),
                   SizedBox(height: 50,
                     child: ElevatedButton(
                        style: ButtonStyle(
@@ -177,7 +308,7 @@ class _MyAppState extends State<MyApp> {
                   height: 50,
                    child: ElevatedButton(
                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
+                        backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(100)
