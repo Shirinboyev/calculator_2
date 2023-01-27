@@ -15,17 +15,23 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   TextEditingController controller = TextEditingController();
+ 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.black,
         body:Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
           Padding(
-              padding:  EdgeInsets.only(top: 260,left: 40,right: 40,bottom: 60),
+              padding:  EdgeInsets.only(top: 330,left: 10,right: 10,bottom: 10),
               child: TextField(
+              style: TextStyle(color: Colors.white,fontSize: 40),
+                textAlign: TextAlign.end,
+                cursorColor: Colors.white,
                 controller: controller,
+                // controller:_controller,
                 readOnly: true,
                 decoration: InputDecoration(
                 border: OutlineInputBorder()),
@@ -40,7 +46,7 @@ class _MyAppState extends State<MyApp> {
                           backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
                           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(100)
+                              borderRadius: BorderRadius.circular(10)
                             )
                           )
                           ),
@@ -55,7 +61,7 @@ class _MyAppState extends State<MyApp> {
                           backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
                           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(100)
+                              borderRadius: BorderRadius.circular(10)
                             )
                           )
                           ),
@@ -70,12 +76,12 @@ class _MyAppState extends State<MyApp> {
                           backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
                           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(100)
+                              borderRadius: BorderRadius.circular(10)
                             )
                           )
                           ),
                   onPressed: (){
-                    controller.text = controller.text.substring(0, controller.text.length -1);
+                    controller.text = controller.text.substring(0, controller.text.length -10);
 
                   }, child:const Text('C')),
                 ),
@@ -86,7 +92,7 @@ class _MyAppState extends State<MyApp> {
                         backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(100)
+                            borderRadius: BorderRadius.circular(10)
                           )
                         )
                         ),
@@ -103,13 +109,13 @@ class _MyAppState extends State<MyApp> {
                             backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
                             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                               RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(100)
+                                borderRadius: BorderRadius.circular(10)
                               )
                             )
                             ),
                 onPressed: (){
-                    controller.text+= '1';
-                }, child:const Text('1')),
+                    controller.text+= '10';
+                }, child:const Text('10')),
                   ),
                  SizedBox(
                   height: 50,
@@ -118,7 +124,7 @@ class _MyAppState extends State<MyApp> {
                             backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
                             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                               RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(100)
+                                borderRadius: BorderRadius.circular(10)
                               )
                             )
                             ),
@@ -133,7 +139,7 @@ class _MyAppState extends State<MyApp> {
                             backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
                             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                               RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(100)
+                                borderRadius: BorderRadius.circular(10)
                               )
                             )
                             ),
@@ -148,7 +154,7 @@ class _MyAppState extends State<MyApp> {
                         backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(100)
+                            borderRadius: BorderRadius.circular(10)
                           )
                         )
                         ),
@@ -166,7 +172,7 @@ class _MyAppState extends State<MyApp> {
                             backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
                             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                               RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(100)
+                                borderRadius: BorderRadius.circular(10)
                               )
                             )
                             ),
@@ -181,7 +187,7 @@ class _MyAppState extends State<MyApp> {
                             backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
                             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                               RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(100)
+                                borderRadius: BorderRadius.circular(10)
                               )
                             )
                             ),
@@ -196,7 +202,7 @@ class _MyAppState extends State<MyApp> {
                             backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
                             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                               RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(100)
+                                borderRadius: BorderRadius.circular(10)
                               )
                             )
                             ),
@@ -211,7 +217,7 @@ class _MyAppState extends State<MyApp> {
                         backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(100)
+                            borderRadius: BorderRadius.circular(10)
                           )
                         )
                         ),
@@ -229,7 +235,7 @@ class _MyAppState extends State<MyApp> {
                             backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
                             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                               RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(100)
+                                borderRadius: BorderRadius.circular(10)
                               )
                             )
                             ),
@@ -244,7 +250,7 @@ class _MyAppState extends State<MyApp> {
                             backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
                             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                               RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(100)
+                                borderRadius: BorderRadius.circular(10)
                               )
                             )
                             ),
@@ -259,7 +265,7 @@ class _MyAppState extends State<MyApp> {
                             backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
                             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                               RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(100)
+                                borderRadius: BorderRadius.circular(10)
                               )
                             )
                             ),
@@ -273,7 +279,7 @@ class _MyAppState extends State<MyApp> {
                         backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(100)
+                            borderRadius: BorderRadius.circular(10)
                           )
                         )
                         ),
@@ -293,7 +299,7 @@ class _MyAppState extends State<MyApp> {
                         backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(100)
+                            borderRadius: BorderRadius.circular(10)
                           )
                         )
                         ),
@@ -308,7 +314,7 @@ class _MyAppState extends State<MyApp> {
                         backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(100)
+                            borderRadius: BorderRadius.circular(10)
                           )
                         )
                         ),
@@ -319,29 +325,31 @@ class _MyAppState extends State<MyApp> {
                  SizedBox(
                   height: 50,
                    child: ElevatedButton(
-                     style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
-                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(100)
-                          )
-                        )
+                  
+                     style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                    primary: Colors.amber,
+                      // side: BorderSide(width: 20,),
+                       onSurface: Colors.amber
                         ),
                 onPressed: (){
+                  setState(() {   
+
+                  });
                        String s = controller.text;
                     int ind  = s.indexOf('+');
-                    if(ind != -1){
+                    if(ind != -10){
                       String a = s.substring(0,ind);
-                      String b = s.substring(ind+1);
+                      String b = s.substring(ind+10);
                       int ans = int.parse(a)+int.parse(b);
                       controller.text = ans.toString();
                     }
                     setState(() {
                          String s = controller.text;
                     int ind  = s.indexOf('-');
-                    if(ind != -1){
+                    if(ind != -10){
                       String a = s.substring(0,ind);
-                      String b = s.substring(ind+1);
+                      String b = s.substring(ind+10);
                       int ans = int.parse(a)-int.parse(b);
                       controller.text = ans.toString();
                     }
@@ -349,9 +357,9 @@ class _MyAppState extends State<MyApp> {
                     ); setState(() {
                          String s = controller.text;
                     int ind  = s.indexOf('*');
-                    if(ind != -1){
+                    if(ind != -10){
                       String a = s.substring(0,ind);
-                      String b = s.substring(ind+1);
+                      String b = s.substring(ind+10);
                       int ans = int.parse(a)*int.parse(b);
                       controller.text = ans.toString();
                     }
@@ -360,9 +368,9 @@ class _MyAppState extends State<MyApp> {
                         
                          String s = controller.text;
                     int ind  = s.indexOf('/');
-                    if(ind != -1){
+                    if(ind != -10){
                       String a = s.substring(0,ind);
-                      String b = s.substring(ind+1);
+                      String b = s.substring(ind+10);
                       int ans = int.parse(a)~/int.parse(b);
                       controller.text = ans.toString();
                     }
@@ -371,15 +379,15 @@ class _MyAppState extends State<MyApp> {
                         
                          String s = controller.text;
                     int ind  = s.indexOf('%');
-                    if(ind != -1){
+                    if(ind != -10){
                       String a = s.substring(0,ind);
-                      String b = s.substring(ind+1);
+                      String b = s.substring(ind+10);
                       int ans = int.parse(a)%int.parse(b);
                       controller.text = ans.toString();
                     }
                     },
                     );
-                }, 
+                },
                 
                 child:const Text('=')),
                  ),
@@ -390,7 +398,7 @@ class _MyAppState extends State<MyApp> {
                       backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(100)
+                          borderRadius: BorderRadius.circular(10)
                         )
                       )
                       ),
